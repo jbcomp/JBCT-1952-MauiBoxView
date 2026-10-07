@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiBoxView.MainPage">
+
+    <VerticalStackLayout>
+        
+        <Label Text="BoxView1 (below) has no WidthRequest in XAML" Margin="10,0,10,10" />
+        <BoxView x:Name="BoxView1" HeightRequest="5" HorizontalOptions="Start" VerticalOptions="End" Margin="0,-2,0,0"
+                 Background="Red" />
+        <Button Text="Set BoxView Width ^ [Android: OK, iOS: FAIL!]" Clicked="WidthButton1_Clicked" Margin="10,10,10,0" />
+        
+        <Label Text="BoxView2 (below) has WidthRequest=1 in XAML" Margin="10,40,10,10" />
+        <BoxView x:Name="BoxView2" HeightRequest="5" WidthRequest="1" HorizontalOptions="Start" VerticalOptions="End" Margin="0,-2,0,0"
+                 Background="Red" />
+        <Button Text="Set BoxView Width ^ [Android: OK, iOS: OK]" Clicked="WidthButton2_Clicked"  Margin="10,10,10,0" />
+
+        <Label Text="Toggling the theme redisplays BoxView1 correctly" Margin="10,40,10,10" />
+        <Button Text="Toggle Theme" Clicked="ThemeButton_Clicked"  Margin="10,10,10,0" />
+
+    </VerticalStackLayout>
+
+</ContentPage>
